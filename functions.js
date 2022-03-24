@@ -87,8 +87,10 @@ Output:
 ]*/
 
 export function makeArrayWithIsHungry(arr) {
-   
-    return spanish;
+    const hunger = arr.map((pet =>{
+        return { name: pet.name, isHungry: true, type: pet.type };
+    }));
+    return hunger;
 }
 
 /*
