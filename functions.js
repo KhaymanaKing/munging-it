@@ -70,7 +70,10 @@ Output:
 */
 
 export function makeSpanishLanguageArray(arr) {
-    return [];
+    const spanish = arr.map((pet => { 
+        return { nombre: pet.name, tipo: pet.type };
+    }));
+    return spanish;
 }
 
 /*
@@ -84,7 +87,8 @@ Output:
 ]*/
 
 export function makeArrayWithIsHungry(arr) {
-    return [];
+   
+    return spanish;
 }
 
 /*
