@@ -1,34 +1,36 @@
-/*
-For this first set of functions, assume the input array looks like this:
 
-const petsArray = [
-    { name: 'spot', type: 'dog' },
-    { name: 'rover', type: 'dog' },
-    { name: 'jumpy', type: 'frog' },
-    { name: 'einstein', type: 'cat' },
-];
+// For this first set of functions, assume the input array looks like this:
+
+// const petsArray = [
+//     { name: 'spot', type: 'dog' },
+//     { name: 'rover', type: 'dog' },
+//     { name: 'jumpy', type: 'frog' },
+//     { name: 'einstein', type: 'cat' },
+// ];
 
 
-/*
-OUTPUT: 
-[
-    { name: 'spot', type: 'dog' },
-    { name: 'rover', type: 'dog' },
+// OUTPUT: 
+// [
+//     { name: 'spot', type: 'dog' },
+//     { name: 'rover', type: 'dog' },
 
-]*/
+// ]
 
 export function getDogs(arr) {
-    return [];
+    const dogs =
+    arr.filter((pet => pet.type === 'dog'));
+    return dogs;
 }
 
-/*
-Output:
 
-['spot', 'rover', 'jumpy', 'einstein']
-*/
+// Output:
+
+// ['spot', 'rover', 'jumpy', 'einstein']
+
+
 
 export function makeArrayOfNames(arr) {
-    return [];
+    return arr.map(pet => pet.name);
 }
 
 /*
@@ -37,7 +39,10 @@ OUTPUT:
 */
 
 export function getNamesOfDogs(arr) {
-    return [];
+    const dogNames =
+    arr.filter((pet => pet.type === 'dog'))
+        .map((pet => pet.name));
+    return dogNames;
 }
 
 /*
@@ -47,7 +52,10 @@ Output:
 */
 
 export function makeReversedArrayOfTypes(arr) {
-    return [];
+    const reverse = 
+    arr.map((pet => pet.type))
+        .reverse();
+    return reverse;
 }
 
 /*
@@ -76,7 +84,7 @@ Output:
 ]*/
 
 export function makeArrayWithIsHungry(arr) {
-     return []
+    return [];
 }
 
 /*
