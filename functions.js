@@ -1,34 +1,36 @@
-/*
-For this first set of functions, assume the input array looks like this:
 
-const petsArray = [
-    { name: 'spot', type: 'dog' },
-    { name: 'rover', type: 'dog' },
-    { name: 'jumpy', type: 'frog' },
-    { name: 'einstein', type: 'cat' },
-];
+// For this first set of functions, assume the input array looks like this:
+
+// const petsArray = [
+//     { name: 'spot', type: 'dog' },
+//     { name: 'rover', type: 'dog' },
+//     { name: 'jumpy', type: 'frog' },
+//     { name: 'einstein', type: 'cat' },
+// ];
 
 
-/*
-OUTPUT: 
-[
-    { name: 'spot', type: 'dog' },
-    { name: 'rover', type: 'dog' },
+// OUTPUT: 
+// [
+//     { name: 'spot', type: 'dog' },
+//     { name: 'rover', type: 'dog' },
 
-]*/
+// ]
 
 export function getDogs(arr) {
-    return [];
+    const dogs =
+    arr.filter((pet => pet.type === 'dog'));
+    return dogs;
 }
 
-/*
-Output:
 
-['spot', 'rover', 'jumpy', 'einstein']
-*/
+// Output:
+
+// ['spot', 'rover', 'jumpy', 'einstein']
+
+
 
 export function makeArrayOfNames(arr) {
-    return [];
+    return arr.map(pet => pet.name);
 }
 
 /*
@@ -37,7 +39,10 @@ OUTPUT:
 */
 
 export function getNamesOfDogs(arr) {
-    return [];
+    const dogNames =
+    arr.filter((pet => pet.type === 'dog'))
+        .map((pet => pet.name));
+    return dogNames;
 }
 
 /*
@@ -47,7 +52,10 @@ Output:
 */
 
 export function makeReversedArrayOfTypes(arr) {
-    return [];
+    const reverse = 
+    arr.map((pet => pet.type))
+        .reverse();
+    return reverse;
 }
 
 /*
@@ -62,7 +70,10 @@ Output:
 */
 
 export function makeSpanishLanguageArray(arr) {
-    return [];
+    const spanish = arr.map((pet => { 
+        return { nombre: pet.name, tipo: pet.type };
+    }));
+    return spanish;
 }
 
 /*
@@ -76,7 +87,10 @@ Output:
 ]*/
 
 export function makeArrayWithIsHungry(arr) {
-     return []
+    const hunger = arr.map((pet =>{
+        return { name: pet.name, isHungry: true, type: pet.type };
+    }));
+    return hunger;
 }
 
 /*
@@ -90,7 +104,11 @@ Output:
 ]*/
 
 export function makeShoutingArray(arr) {
-    return [];
+    const upperCaseNames =
+    arr.map((pet => {
+        return { name: pet.name.toUpperCase(), type: pet.type };
+    }));
+    return upperCaseNames;
 }
 
 
@@ -101,7 +119,7 @@ Output:
 */
 
 export function makeStringArray(arr) {
-    return [];
+    return arr.map((pet => pet.name + pet.type));
 }
 
 /*
@@ -113,8 +131,11 @@ OUTPUT:
 { name: 'jumpy', type: 'frog' }
 */
 
-export function findByName(name, arr) {
-    return {};
+export function findByName(arr) {
+    const petArray = arr.map((pet =>{ 
+        return Object.entries(pet);
+    }));
+    return petArray;
 }
 
 /*
@@ -140,7 +161,10 @@ Output:
 */
 
 export function makeArrayOfArraysOfArrays(arr) {
-    return [];
+    
+
+        
+    return arr;
 }
 
 ////////////////////////////////////////////////////////
