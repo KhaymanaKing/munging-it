@@ -119,7 +119,7 @@ Output:
 */
 
 export function makeStringArray(arr) {
-    return [];
+    return arr.map((pet => pet.name + pet.type));
 }
 
 /*
@@ -131,8 +131,12 @@ OUTPUT:
 { name: 'jumpy', type: 'frog' }
 */
 
-export function findByName(name, arr) {
-    return {};
+export function findByName(arr) {
+    const petArray = arr.map((pet =>{
+        return Object.entries(pet);
+    }));
+    return petArray;
+   
 }
 
 /*
@@ -158,7 +162,7 @@ Output:
 */
 
 export function makeArrayOfArraysOfArrays(arr) {
-    return [];
+    return arr;
 }
 
 ////////////////////////////////////////////////////////
