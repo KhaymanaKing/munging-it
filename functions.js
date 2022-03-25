@@ -104,7 +104,11 @@ Output:
 ]*/
 
 export function makeShoutingArray(arr) {
-    return [];
+    const upperCaseNames =
+    arr.map((pet => {
+        return { name: pet.name.toUpperCase(), type: pet.type };
+    }));
+    return upperCaseNames;
 }
 
 
