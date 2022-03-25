@@ -132,11 +132,10 @@ OUTPUT:
 */
 
 export function findByName(arr) {
-    const petArray = arr.map((pet =>{
+    const petArray = arr.map((pet =>{ 
         return Object.entries(pet);
     }));
     return petArray;
-   
 }
 
 /*
@@ -162,6 +161,9 @@ Output:
 */
 
 export function makeArrayOfArraysOfArrays(arr) {
+    
+
+        
     return arr;
 }
 
